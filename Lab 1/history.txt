@@ -1,0 +1,43 @@
+cd Desktop
+gcc sample.c
+a.out
+dir
+a.exe
+gcc -E sample.c
+gcc -E sample.c > preprocessing.txt
+gcc -S sample.c > assembly.txt
+gcc -S sample.c
+gcc -c sample.c
+gcc -S sample.c
+gcc -E sample.c > sample.i
+cc -S sample.c > assembly.txt
+cd "compiler design"
+type sample.s
+type sample.i
+type sample.o
+type sample.s > assembly.txt
+type sample.o > assembly.txt
+type sample.s > assembly.txt
+type sample.s > binary.txt
+type sample.o > binary.txt
+type a.exe
+gdb sample.o
+nm --format sysv sample.c
+nm --format sysv sample.o
+nm --format sysv sample.exe
+nm --format sysv a.out
+objdump -t
+objdump -t a.out
+objdump -t a.exe
+type sample.o
+objdump -D sample.o
+objdump -D sample.i
+objdump -D a.exe
+objdump -D a.exe > Executable_file.txt
+objdump -D sample.o > Executable_file.txt
+objdump -D a.exe > Executable_file.txt
+objdump -D sample.o > object_file.txt
+history
+doskry /HISTORY > history.txt
+doskey /HISTORY > history.txt
+"https://www.cs.swarthmore.edu/~newhall/unixhelp/compilecycle.html" 

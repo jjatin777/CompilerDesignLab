@@ -1,0 +1,3 @@
+This file is to count number of words; 
+Some numbers 98234;
+Some alphanumeric text 2334hjk43

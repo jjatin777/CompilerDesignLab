@@ -1,0 +1,3 @@
+this is a text in upper case mostly.
+convert it all to lowercase;
+some numbers 98jssy*$b&j

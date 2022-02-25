@@ -1,0 +1,83 @@
+
+sample.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 30          	sub    $0x30,%rsp
+   8:	e8 00 00 00 00       	callq  d <main+0xd>
+   d:	c7 45 fc 05 00 00 00 	movl   $0x5,-0x4(%rbp)
+  14:	c7 45 f8 06 00 00 00 	movl   $0x6,-0x8(%rbp)
+  1b:	8b 55 fc             	mov    -0x4(%rbp),%edx
+  1e:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  21:	01 d0                	add    %edx,%eax
+  23:	89 c2                	mov    %eax,%edx
+  25:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 2c <main+0x2c>
+  2c:	e8 00 00 00 00       	callq  31 <main+0x31>
+  31:	b8 00 00 00 00       	mov    $0x0,%eax
+  36:	48 83 c4 30          	add    $0x30,%rsp
+  3a:	5d                   	pop    %rbp
+  3b:	c3                   	retq   
+  3c:	90                   	nop
+  3d:	90                   	nop
+  3e:	90                   	nop
+  3f:	90                   	nop
+
+Disassembly of section .rdata:
+
+0000000000000000 <.rdata>:
+   0:	25 64 00 00 00       	and    $0x64,%eax
+	...
+
+Disassembly of section .xdata:
+
+0000000000000000 <.xdata>:
+   0:	01 08                	add    %ecx,(%rax)
+   2:	03 05 08 52 04 03    	add    0x3045208(%rip),%eax        # 3045210 <.xdata+0x3045210>
+   8:	01 50 00             	add    %edx,0x0(%rax)
+	...
+
+Disassembly of section .pdata:
+
+0000000000000000 <.pdata>:
+   0:	00 00                	add    %al,(%rax)
+   2:	00 00                	add    %al,(%rax)
+   4:	3c 00                	cmp    $0x0,%al
+   6:	00 00                	add    %al,(%rax)
+   8:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .rdata$zzz:
+
+0000000000000000 <.rdata$zzz>:
+   0:	47                   	rex.RXB
+   1:	43                   	rex.XB
+   2:	43 3a 20             	rex.XB cmp (%r8),%spl
+   5:	28 78 38             	sub    %bh,0x38(%rax)
+   8:	36 5f                	ss pop %rdi
+   a:	36 34 2d             	ss xor $0x2d,%al
+   d:	70 6f                	jo     7e <.rdata$zzz+0x7e>
+   f:	73 69                	jae    7a <.rdata$zzz+0x7a>
+  11:	78 2d                	js     40 <.rdata$zzz+0x40>
+  13:	73 65                	jae    7a <.rdata$zzz+0x7a>
+  15:	68 2d 72 65 76       	pushq  $0x7665722d
+  1a:	30 2c 20             	xor    %ch,(%rax,%riz,1)
+  1d:	42 75 69             	rex.X jne 89 <.rdata$zzz+0x89>
+  20:	6c                   	insb   (%dx),%es:(%rdi)
+  21:	74 20                	je     43 <.rdata$zzz+0x43>
+  23:	62                   	(bad)  
+  24:	79 20                	jns    46 <.rdata$zzz+0x46>
+  26:	4d 69 6e 47 57 2d 57 	imul   $0x36572d57,0x47(%r14),%r13
+  2d:	36 
+  2e:	34 20                	xor    $0x20,%al
+  30:	70 72                	jo     a4 <.rdata$zzz+0xa4>
+  32:	6f                   	outsl  %ds:(%rsi),(%dx)
+  33:	6a 65                	pushq  $0x65
+  35:	63 74 29 20          	movslq 0x20(%rcx,%rbp,1),%esi
+  39:	38 2e                	cmp    %ch,(%rsi)
+  3b:	31 2e                	xor    %ebp,(%rsi)
+  3d:	30 00                	xor    %al,(%rax)
+	...

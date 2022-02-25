@@ -1,0 +1,12 @@
+#include<iostream.h>
+using namespace std;
+int main(){
+    int a, b;
+    a = -5; b =6;
+    double a7 = 5.7898;
+    doubel b67g78 =8.;
+    if(a == 9) cout << "67"<<endl;
+    cout << a+b << endl;
+    cout << 9*7<<endl;
+    cout << "Printing something" << endl;
+}
